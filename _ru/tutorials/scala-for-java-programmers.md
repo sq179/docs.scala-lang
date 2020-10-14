@@ -81,22 +81,24 @@ languages: ru
 
     Hello, world!
 
-## Interaction with Java
+## Взаимодействие с Java
 
-One of Scala's strengths is that it makes it very easy to interact
-with Java code. All classes from the `java.lang` package are
-imported by default, while others need to be imported explicitly.
+Одна из сильных сторон Scala заключается в том, что с ней можно очень 
+легко взаимодействовать с кодом написаным на Java. Все классы из 
+пакета `java.lang` импортируются по умолчанию, а другие нужно 
+импортировать явно.
 
-Let's look at an example that demonstrates this.  We want to obtain
-and format the current date according to the conventions used in a
-specific country, say France. (Other regions such as the
-French-speaking part of Switzerland use the same conventions.)
+Давайте посмотрим на пример, демонстрирующий это. Мы хотим получить
+и отформатировать текущую дату в соответствии с соглашениями, 
+используемыми в конкретная страной стране, скажем Франции. (Другие 
+регионы, такие как Франкоязычная часть Швейцарии использует те же 
+соглашения.)
 
-Java's class libraries define powerful utility classes, such as
-`Date` and `DateFormat`. Since Scala interoperates
-seamlessly with Java, there is no need to implement equivalent
-classes in the Scala class library--we can simply import the classes
-of the corresponding Java packages:
+Библиотеки классов Java определяют мощные служебные классы, такие как
+`Date` и `DateFormat`. Поскольку Scala взаимодействует
+без проблем с Java, нет необходимости реализовывать эквивалентые
+классы в библиотеке классов Scala - мы можем просто импортировать классы
+соответствующих пакетов Java:
 
     import java.util.{Date, Locale}
     import java.text.DateFormat._
@@ -109,40 +111,40 @@ of the corresponding Java packages:
       }
     }
 
-Scala's import statement looks very similar to Java's equivalent,
-however, it is more powerful. Multiple classes can be imported from
-the same package by enclosing them in curly braces as on the first
-line. Another difference is that when importing all the names of a
-package or class, one uses the underscore character (`_`) instead
-of the asterisk (`*`). That's because the asterisk is a valid
-Scala identifier (e.g. method name), as we will see later.
+Оператор импорта в Scala очень похож на эквивалент в Java,
+однако он более мощный. Несколько классов можно импортировать из
+того же пакета, заключив их в фигурные скобки, как на первой строке. 
+Другое отличие состоит в том, что при импорте всех имен пакета или 
+класса, вместо звездочки (`*`) используется символ подчеркивания (`_`). 
+Это потому, что звездочка - действительный идентификатор Scala 
+(например, имя метода), как мы увидим позже.
 
-The import statement on the second line therefore imports all members
-of the `DateFormat` class. This makes the static method
-`getDateInstance` and the static field `LONG` directly
-visible.
+Оператор импорта во второй строке импортирует все элементы класса 
+`DateFormat`. Это делает статический метод `getDateInstance` и 
+статическое поле `LONG` напрямую видимыми.
 
-Inside the `main` method we first create an instance of Java's
-`Date` class which by default contains the current date. Next, we
-define a date format using the static `getDateInstance` method
-that we imported previously. Finally, we print the current date
-formatted according to the localized `DateFormat` instance. This
-last line shows an interesting property of Scala's syntax. Methods
-taking one argument can be used with an infix syntax. That is, the
-expression
+Внутри метода `main` мы сначала создаем экземпляр Java класса `Date`, 
+который по умолчанию содержит текущую дату. Далее мы определяем формат 
+даты с помощью статического метода `getDateInstance`, который мы 
+импортировали ранее. Наконец, печатаем текущую дату отформатированную 
+в соответствии с локализованным экземпляром `DateFormat`. Эта последняя 
+строка показывает интересное свойство синтаксиса Scala. Методы
+использующие однин аргумент могут использоваться с инфиксным синтаксисом. 
+Это выражение
 
     df format now
 
-is just another, slightly less verbose way of writing the expression
+это просто еще один, менее подробный способ написания выражения
 
     df.format(now)
 
-This might seem like a minor syntactic detail, but it has important
-consequences, one of which will be explored in the next section.
+Это может показаться незначительной синтаксической деталью, но у 
+нее есть важные последствия, одно из которых будет исследовано в 
+следующем разделе.
 
-To conclude this section about integration with Java, it should be
-noted that it is also possible to inherit from Java classes and
-implement Java interfaces directly in Scala.
+В заключение этого раздела об интеграции с Java следует 
+отметить, что также возможно наследование от классов Java и 
+реализация интерфейсов Java непосредственно в Scala.
 
 ## Everything is an Object
 
