@@ -29,26 +29,25 @@ languages: ru
       }
     }
 
-The structure of this program should be familiar to Java programmers:
-it consists of one method called `main` which takes the command
-line arguments, an array of strings, as parameter; the body of this
-method consists of a single call to the predefined method `println`
-with the friendly greeting as argument. The `main` method does not
-return a value. Therefore, its return type is declared as `Unit`.
+Структура этой программы должна быть знакома Java-программистам:
+она состоит из одного метода под названием `main`, который принимает 
+аргументы командной строки (массив строк в качестве параметра).
+Тело этого метода состоит из единственного вызова предопределенного 
+метода `println` с дружеским приветствием в качестве аргумента. 
+Метод `main` не возвращает значение. Поэтому его возвращаемый тип 
+объявлен как `Unit`.
 
-What is less familiar to Java programmers is the `object`
-declaration containing the `main` method. Such a declaration
-introduces what is commonly known as a *singleton object*, that
-is a class with a single instance. The declaration above thus declares
-both a class called `HelloWorld` and an instance of that class,
-also called `HelloWorld`. This instance is created on demand,
-the first time it is used.
+Что менее знакомо программистам на Java, так это `object` объявление, 
+содержащее метод `main`. Такое объявление вводит то, что обычно известно 
+как *singleton объект*, то есть класс с единственным экземпляром. 
+Таким образом, в приведенном выше объявление как класс под названием 
+`HelloWorld`, так и экземпляр этого класса, также называется `HelloWorld`. 
+Этот экземпляр создается по запросу, при первом использовании.
 
-The astute reader might have noticed that the `main` method is
-not declared as `static` here. This is because static members
-(methods or fields) do not exist in Scala. Rather than defining static
-members, the Scala programmer declares these members in singleton
-objects.
+Проницательный читатель мог заметить, что `main` метод - не объявлен 
+здесь как `static`. Это потому, что статические члены (методы или поля) 
+не существуют в Scala. Вместо определения статических членов, 
+программист Scala объявляет их в singleton объекте.
 
 ### Компиляция примера
 
