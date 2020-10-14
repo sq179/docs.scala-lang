@@ -8,13 +8,13 @@ languages: ru
 
 Авторы: Michel Schinz, Philipp Haller.
 
-## Introduction
+## Введение
 
-This document gives a quick introduction to the Scala language and
-compiler. It is intended for people who already have some programming
-experience and want an overview of what they can do with Scala. A
-basic knowledge of object-oriented programming, especially in Java, is
-assumed.
+Эта статья является быстрым вводом в язык Scala и его компилятор.
+Она предназначена для людей, которые уже имеют некоторый опыт 
+программирования и хотят увидеть, что они могут делать на языке Scala. 
+Предполагается базовое владение объективно-ориентированным 
+программированием, в особенности на Java.
 
 ## Первый пример
 
@@ -49,32 +49,33 @@ assumed.
 не существуют в Scala. Вместо определения статических членов, 
 программист Scala объявляет их в singleton объекте.
 
-### Compiling the example
+### Компиляция примера
 
-To compile the example, we use `scalac`, the Scala compiler. `scalac`
-works like most compilers: it takes a source file as argument, maybe
-some options, and produces one or several object files. The object
-files it produces are standard Java class files.
+Чтобы скомпилировать пример, нужно использовать `scalac` - компилятор 
+языка Scala. `scalac` работает подобно большинству компиляторов: он 
+берет исходный файл (файл с исходным кодом) в качестве аргумента, возможно 
+некоторые параметры, и производит один или несколько файлов. 
+Файлы, которые он производит являются стандартными Java-класс файлами.
 
-If we save the above program in a file called
-`HelloWorld.scala`, we can compile it by issuing the following
-command (the greater-than sign `>` represents the shell prompt
-and should not be typed):
+Если мы сохраним программу выше в файле `HelloWorld.scala`, 
+мы сможем скомпилировать его используя команду
+(знак "больше-чем" `>` представляет из себя ввод коммандной 
+строки и может быть опущен):
 
     > scalac HelloWorld.scala
 
-This will generate a few class files in the current directory. One of
-them will be called `HelloWorld.class`, and contains a class
-which can be directly executed using the `scala` command, as the
-following section shows.
+Это создаст несколько файлов в текущей директории. Один из них будет 
+называться `HelloWorld.class`, и будет содержать класс, который может 
+быть напрямую запущен используя команду `scala`, как демонстрирует 
+следующая секция.
 
-### Running the example
+### Запуск примера
 
-Once compiled, a Scala program can be run using the `scala` command.
-Its usage is very similar to the `java` command used to run Java
-programs, and accepts the same options. The above example can be
-executed using the following command, which produces the expected
-output:
+После компиляции, программа на языке Scala может быть запущена 
+используя команду `scala`. Она очень схожа с `java`, команда 
+используемая для запуска программ на языке Java, и принимающая 
+некоторые параметры. Пример выше может быть запущен используя 
+данную команду, которая создает тривиальный вывод:
 
     > scala -classpath . HelloWorld
 
