@@ -6,7 +6,7 @@ partof: scala-for-java-programmers
 languages: ru
 ---
 
-Авторы Michel Schinz и Philipp Haller
+Авторы: Michel Schinz, Philipp Haller.
 
 ## Introduction
 
