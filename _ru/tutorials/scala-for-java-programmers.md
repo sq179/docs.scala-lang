@@ -16,12 +16,12 @@ experience and want an overview of what they can do with Scala. A
 basic knowledge of object-oriented programming, especially in Java, is
 assumed.
 
-## A First Example
+## Первый пример
 
-As a first example, we will use the standard *Hello world* program. It
-is not very fascinating but makes it easy to demonstrate the use of
-the Scala tools without knowing too much about the language. Here is
-how it looks:
+В качестве первого примера используем стандартную *Hello world* программу. 
+Пример не очень увлекательный, но позволяет легко продемонстрировать 
+использование инструментов Scala, без особых знаний языка. Вот как 
+это выглядит:
 
     object HelloWorld {
       def main(args: Array[String]): Unit = {
