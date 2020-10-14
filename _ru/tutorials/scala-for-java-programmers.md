@@ -8,13 +8,13 @@ languages: ru
 
 Авторы: Michel Schinz, Philipp Haller.
 
-## Introduction
+## Введение
 
-This document gives a quick introduction to the Scala language and
-compiler. It is intended for people who already have some programming
-experience and want an overview of what they can do with Scala. A
-basic knowledge of object-oriented programming, especially in Java, is
-assumed.
+Эта статья является быстрым вводом в язык Scala и его компилятор.
+Она предназначена для людей, которые уже имеют некоторый опыт 
+программирования и хотят увидеть, что они могут делать на языке Scala. 
+Предполагается базовое владение объективно-ориентированным 
+программированием, в особенности на Java.
 
 ## Первый пример
 
