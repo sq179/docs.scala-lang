@@ -168,32 +168,29 @@ following expression, as we saw in the previous section:
 This also means that `+`, `*`, etc. are valid identifiers
 in Scala.
 
-### Functions are objects
+### Функции - это объекты
 
-Functions are also
-objects in Scala. It is therefore possible to pass functions as
-arguments, to store them in variables, and to return them from other
-functions. This ability to manipulate functions as values is one of
-the cornerstone of a very interesting programming paradigm called
-*functional programming*.
+Функции также являются объектами в Scala. Следовательно, функции 
+возможно передавать как аргументы, хранить в переменных и возвращать 
+их из других функций. Возможность манипулировать функциями как значениями 
+является одним из краеугольных камней очень интересной парадигмы, которая 
+носит название *функциональное программирование*.
 
-As a very simple example of why it can be useful to use functions as
-values, let's consider a timer function whose aim is to perform some
-action every second. How do we pass it the action to perform? Quite
-logically, as a function. This very simple kind of function passing
-should be familiar to many programmers: it is often used in
-user-interface code, to register call-back functions which get called
-when some event occurs.
+В качестве простого примера полезности использования функции в качестве значений,
+давайте рассмотрим функцию-таймер, которая направлена на выполнение некоторых 
+действий каждые несколько секунд. Как мы укажем ей, какое действие выполнять ? 
+Очень логично, функцией. Этот очень простой вид передачи функции должен быть
+знаком многим программистам: регистрация call-back функций которые будут вызываться,
+когда происходит ошибка очень часто это используется в программировании 
+пользовательских интерфейсов.
 
-In the following program, the timer function is called
-`oncePerSecond`, and it gets a call-back function as argument.
-The type of this function is written `() => Unit` and is the type
-of all functions which take no arguments and return nothing (the type
-`Unit` is similar to `void` in C/C++). The main function of
-this program simply calls this timer function with a call-back which
-prints a sentence on the terminal. In other words, this program
-endlessly prints the sentence "time flies like an arrow" every
-second.
+В этой программе функция-таймер называется `oncePerSecond`, и получает 
+callback-функцию как аргумент. Тип этой функции записан как `() => Unit` 
+и является типом всех функций, которые ничего не берут в качестве аргумента
+и ничего не возвращают (Тип `Unit` схож с типом `void` в языках C/C++). 
+Функция `main` этой программы просто вызывает эту функцию-таймер 
+с call-back функцией, которая печатает слова в терминал. Другими словами,
+эта программа бесконечно пишет "time flies like an arrow" каждую секунду.
 
     object Timer {
       def oncePerSecond(callback: () => Unit): Unit = {
@@ -207,8 +204,8 @@ second.
       }
     }
 
-Note that in order to print the string, we used the predefined method
-`println` instead of using the one from `System.out`.
+Запомните: чтобы напечатать строку мы используем предопределенный метод
+`println` вместо использования `System.out`.
 
 #### Anonymous functions
 
