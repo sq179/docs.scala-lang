@@ -145,13 +145,13 @@ languages: ru
 отметить, что также возможно наследование от классов Java и 
 реализация интерфейсов Java непосредственно в Scala.
 
-## Everything is an Object
+## Все есть объектом
 
-Scala is a pure object-oriented language in the sense that
-*everything* is an object, including numbers or functions. It
-differs from Java in that respect, since Java distinguishes
-primitive types (such as `boolean` and `int`) from reference
-types.
+Scala чистый объектно-ориентированный язык в том смысле, 
+что *все* является объектом, включая числа или функции. В 
+этом отношении с Java есть отличия, поскольку Java отделяет
+примитивные типы (такие как, `boolean` или `int`) от ссылочных 
+типов.
 
 ### Numbers are objects
 
