@@ -210,18 +210,18 @@ second.
 Note that in order to print the string, we used the predefined method
 `println` instead of using the one from `System.out`.
 
-#### Anonymous functions
+#### Анонимные функции
 
-While this program is easy to understand, it can be refined a bit.
-First of all, notice that the function `timeFlies` is only
-defined in order to be passed later to the `oncePerSecond`
-function. Having to name that function, which is only used once, might
-seem unnecessary, and it would in fact be nice to be able to construct
-this function just as it is passed to `oncePerSecond`. This is
-possible in Scala using *anonymous functions*, which are exactly
-that: functions without a name. The revised version of our timer
-program using an anonymous function instead of *timeFlies* looks
-like that:
+Хотя эту программу легко понять, ее можно немного усовершенствовать.
+Прежде всего, обратите внимание, что функция `timeFlies` определена 
+только для того, чтобы позже передаваться в функцию `oncePerSecond`.
+Необходимость называть эту функцию, которая используется только один 
+раз, может показаться ненужной, и на самом деле было бы неплохо иметь 
+возможность сконструировать эту функцию так, как она передается в 
+`oncePerSecond`. Это возможно в Scala с использованием 
+*анонимных функций*, а именно: функций без имени. Обновленная версия 
+нашей программы таймера, использующая анонимную функцию вместо 
+*timeFlies*, выглядит так:
 
     object TimerAnonymous {
       def oncePerSecond(callback: () => Unit): Unit = {
@@ -233,12 +233,11 @@ like that:
       }
     }
 
-The presence of an anonymous function in this example is revealed by
-the right arrow `=>` which separates the function's argument
-list from its body. In this example, the argument list is empty, as
-witnessed by the empty pair of parenthesis on the left of the arrow.
-The body of the function is the same as the one of `timeFlies`
-above.
+Наличие анонимной функции в этом примере показано стрелкой вправо `=>`, 
+которая отделяет список аргументов функции от ее тела. В этом примере 
+список аргументов пуст, о чем свидетельствует пустая пара круглых 
+скобок слева от стрелки. Тело функции такое же, как и у `timeFlies` 
+выше.
 
 ## Classes
 
