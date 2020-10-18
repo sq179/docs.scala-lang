@@ -236,42 +236,42 @@ callback-функцию как аргумент. Тип этой функции 
 скобок слева от стрелки. Тело функции такое же, как и у `timeFlies` 
 выше.
 
-## Classes
+## Классы
 
-As we have seen above, Scala is an object-oriented language, and as
-such it has a concept of class. (For the sake of completeness,
-  it should be noted that some object-oriented languages do not have
-  the concept of class, but Scala is not one of them.)
-Classes in Scala are declared using a syntax which is close to
-Java's syntax. One important difference is that classes in Scala can
-have parameters. This is illustrated in the following definition of
-complex numbers.
+Как мы видели выше, Scala - объектно-ориентированный язык, и поэтому 
+он имеет понятие класса. (Для полноты картины следует отметить, что
+некоторые объектно-ориентированные языки не имеют концепции класса,
+но Scala не входит в их число.) Классы в Scala объявляются с
+использованием синтаксиса, близкого к синтаксису Java. Одно важное
+отличие состоит в том, что классы в Scala могут иметь параметры.
+Это показано в следующем определении комплексных чисел.
 
     class Complex(real: Double, imaginary: Double) {
       def re() = real
       def im() = imaginary
     }
 
-This `Complex` class takes two arguments, which are the real and
-imaginary part of the complex number. These arguments must be passed when
-creating an instance of class `Complex`, as follows: `new
-  Complex(1.5, 2.3)`. The class contains two methods, called `re`
-and `im`, which give access to these two parts.
+Класс `Complex` принимает два аргумента, которые являются
+действительной и мнимой частью комплексного числа. Эти аргументы 
+должны быть переданы при создании экземпляра класса `Complex`
+следующим образом: `new Complex (1.5, 2.3)`. Класс содержит два 
+метода, называемых `re` и `im`, которые предоставляют доступ к
+этим двум частям.
 
-It should be noted that the return type of these two methods is not
-given explicitly. It will be inferred automatically by the compiler,
-which looks at the right-hand side of these methods and deduces that
-both return a value of type `Double`.
+Следует отметить, что тип возвращаемого значения этих двух методов
+не указывается явно. Он будет автоматически выведен компилятором,
+который смотрит на правую часть этих методов и делает вывод, что оба
+возвращают значение типа `Double`.
 
-The compiler is not always able to infer types like it does here, and
-there is unfortunately no simple rule to know exactly when it will be
-able to. In practice, this is usually not a problem since the
-compiler complains when it is not able to infer a type which was not
-given explicitly. As a simple rule, beginner Scala programmers should
-try to omit type declarations which seem to be easy to deduce from the
-context, and see if the compiler agrees. After some time, the
-programmer should get a good feeling about when to omit types, and
-when to specify them explicitly.
+Компилятор не всегда может выводить типы, как здесь, и, к сожалению,
+нет простого правила, чтобы точно знать, когда он сможет это сделать.
+На практике это обычно не проблема, поскольку компилятор жалуется,
+когда не может определить тип, который не был задан явно. Как простое
+правило, начинающие программисты на Scala должны попытаться опустить
+объявления типов, которые кажутся легко выводимыми из контекста, и
+посмотреть, согласен ли компилятор. По прошествии некоторого времени
+программист должен хорошо понимать, когда следует опускать типы, а
+когда указывать их явно.
 
 ### Methods without arguments
 
