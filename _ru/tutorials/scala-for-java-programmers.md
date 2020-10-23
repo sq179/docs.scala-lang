@@ -299,18 +299,17 @@ callback-функцию как аргумент. Тип этой функции 
     }
 
 
-### Inheritance and overriding
+### Наследование и переопределение
 
-All classes in Scala inherit from a super-class. When no super-class
-is specified, as in the `Complex` example of previous section,
-`scala.AnyRef` is implicitly used.
+Все классы в Scala наследуются от супер-класса. Если супер-класс не 
+указан, как показано в классе `Complex` из предыдущей секции
+то будет неявно использован класс `scala.AnyRef`.
 
-It is possible to override methods inherited from a super-class in
-Scala. It is however mandatory to explicitly specify that a method
-overrides another one using the `override` modifier, in order to
-avoid accidental overriding. As an example, our `Complex` class
-can be augmented with a redefinition of the `toString` method
-inherited from `Object`.
+В Scala можно переопределять методы унаследованные от супер-класса. 
+Однако, обязательно нужно указать что метод переопределяется другим 
+используя модификатор `override`, чтобы избежать случайного переопределения.
+Например, наш класс `Complex` может быть дополнен с переопределением метода
+`toString` унаследованного из класса `Object`.
 
     class Complex(real: Double, imaginary: Double) {
       def re = real
@@ -319,7 +318,7 @@ inherited from `Object`.
         "" + re + (if (im >= 0) "+" else "") + im + "i"
     }
 
-We can call overridden `toString` method as below.
+Мы можем вызвать переопределенный метод `toString` как показано ниже.
 
     object ComplexNumbers {
       def main(args: Array[String]): Unit = {
