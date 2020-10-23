@@ -273,11 +273,11 @@ callback-функцию как аргумент. Тип этой функции 
 программист должен хорошо понимать, когда следует опускать типы, а
 когда указывать их явно.
 
-### Methods without arguments
+### Методы без аргументов
 
-A small problem of the methods `re` and `im` is that, in
-order to call them, one has to put an empty pair of parenthesis after
-their name, as the following example shows:
+Небольшая проблема методов `re` и `im` в том, что для их вызова нужно 
+поставить пустую пару скобок после их имени, как показано в 
+следующем примере:
 
     object ComplexNumbers {
       def main(args: Array[String]): Unit = {
@@ -286,13 +286,12 @@ their name, as the following example shows:
       }
     }
 
-It would be nicer to be able to access the real and imaginary parts
-like if they were fields, without putting the empty pair of
-parenthesis. This is perfectly doable in Scala, simply by defining
-them as methods *without arguments*. Such methods differ from
-methods with zero arguments in that they don't have parenthesis after
-their name, neither in their definition nor in their use. Our
-`Complex` class can be rewritten as follows:
+Было бы лучше иметь доступ к реальным и мнимым частям, как если бы 
+они были полями, без добавления пустой пары скобок. В Scala это 
+можно сделать, просто определив их как методы *без аргументов*. 
+Такие методы отличаются от методов с нулевыми аргументами тем, что 
+у них нет скобок после имени, ни в их определении, ни в их 
+использовании. Наш класс `Complex` можно переписать следующим образом:
 
     class Complex(real: Double, imaginary: Double) {
       def re = real
